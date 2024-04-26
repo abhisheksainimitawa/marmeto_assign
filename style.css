@@ -1,0 +1,299 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for the product container */
+.product-container {
+  display: flex;
+  flex-direction: column;
+  /* Add other styles as needed */
+}
+
+/* Responsive adjustments for tablet and desktop screens */
+@media (min-width: 768px) {
+  .product-container {
+      flex-direction: row;
+  }
+  /* Add other responsive styles */
+}
+
+/* Add more styles for thumbnail images, selectors, buttons, etc. */
+/* Main product image */
+#main-image {
+  width: 587px;
+  height: 691px;
+  margin-left: 80px;
+  border: 1px solid #EDF0F8;
+  border-radius: 10px 0 0 0;
+  
+  /* Add any other necessary styles */
+}
+
+
+/* Thumbnail images */
+.thumbnail-images {
+  width: 512px; /* Set thumbnail width */
+  height: 131px;
+  margin-left: 103px;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust spacing between thumbnails */
+}
+
+.thumbnail {
+  /* Thumbnail images */
+
+  width: 520px;
+  height: 115px;
+  gap: 20px;
+  opacity: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Add a smooth hover effect */
+}
+
+.thumbnail:hover {
+  transform: scale(1.1); /* Enlarge the thumbnail on hover */
+}
+/* Product container */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Center horizontally */
+  padding: 20px; /* Add padding as needed */
+  background-color: #f9f9f9; /* Set a background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+
+.product-container{
+  margin-top: 80px;
+}
+
+#vendor {
+  color: #B9BBBF;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  text-align: left;
+  border-radius: 5px; /* Rounded corners */
+}
+#title {
+  font-size: 24px;
+  font-weight: 600;
+}
+/* Price */
+#price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #007BFF; /* Blue color for price */
+  margin-top: 10px;
+}
+
+/* Compare Price */
+#compare-price {
+  font-size: 16px;
+  text-decoration: line-through; /* Strike through the compare price */
+  color: #777; /* Dim the compare price */
+  margin-top: 5px;
+}
+
+/* Discount */
+#discount {
+  font-size: 18px;
+  font-weight: 500;
+  color: #E74C3C; /* Red color for discount */
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.price{
+  display: flex;
+  flex-direction: row;
+
+}
+
+/*color selector*/
+.color1{
+  background-color: #ECDECC;
+}
+.color2{
+  background-color: #BBD278;
+}
+.color3{
+  background-color: 
+  #BBC1F8;
+}
+.color4{
+  background-color: 
+  #FFD3F8;
+}
+.color-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.color-option {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  position: relative;
+}
+
+.color-option input[type='radio'] {
+  display: none;
+}
+
+.color-option span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: transparent;
+}
+
+.color-option input[type='radio']:checked + span {
+  color: #fff;
+  border-color: black;
+}
+
+.color-option input[type='radio']:checked + span::before {
+  content: '\2713'; /* Checkmark symbol */
+}
+/* Size Selector */
+.size-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.size-option {
+  display: inline-block;
+  background-color: 
+  #EDF0F8;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #EDF0F8;
+  cursor: pointer;
+}
+
+
+
+.size-option input[type='radio']:checked + span {
+  color: #3A4980;
+  border-radius: 50%;
+}
+
+/* Quantity Selector */
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5; /* Light grey background */
+  border-radius: 29.5px; /* Rounded corners */
+  padding: 10px;
+  width: 169px;
+  height: 59px;
+
+}
+
+.quantity .minus,
+.quantity .plus {
+  background-color: transparent;
+  border: none;
+  font-size: 16px; /* Larger font size for visibility */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.quantity .input-text.qty.text {
+  width: 40px; /* Fixed width for the number input */
+  text-align: center;
+  border: none; 
+  background-color: #f5f5f5;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  
+}
+.fa-cart-plus{
+  background:#3A4980;
+}
+
+.addtocart{
+  display:block;
+  padding:0.5em 1em 0.5em 1em;
+  border-radius:29.5px;
+  border:none;
+  font-size:2em;
+  position:relative;
+  background:
+  #3A4980;
+  cursor:pointer;
+  height:59px;
+  width:309px;
+  overflow:hidden;
+  transition:transform 0.1s;
+  z-index:1;
+}
+.addtocart:hover{
+  transform:scale(1.1);
+}
+.pretext{
+  color:#fff;
+  background:
+  #3A4980;
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Quicksand', sans-serif;
+}
+i{
+  margin-right:10px;
+}
+
+.product-description{
+  font-family: Inter, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  color: #A3A3A3;
+  padding: 10px;
+}
+
+hr {
+  width: 582px;
+  height: 1px;
+  background-color: #E4E4E4;
+  border: none; 
+  position: relative;
+  margin-top: 10px;
+}
+
+#cartMessage{
+  background-color: #E7F8B7;
+  border-radius: 29.5px;
+  justify-content: center;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.94px;
+  color: black;
+  
+}
+
